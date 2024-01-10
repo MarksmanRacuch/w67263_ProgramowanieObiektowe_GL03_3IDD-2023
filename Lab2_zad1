@@ -1,0 +1,43 @@
+using System;
+
+public class Count_numbers
+{
+    int container;
+
+    // initiate container into number
+    public Count_numbers(int number)
+    {
+        this.container = number;
+    }
+
+    // add number to container
+    public void Add(int number)
+    {
+        this.container += number;
+    }
+
+    // substract number to container
+    public void Substract(int number)
+    {
+        this.container -= number;
+    }
+
+    // print current state
+    public void Print()
+    {
+        Console.WriteLine($"Current state: {container}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Count_numbers @object = new Count_numbers(10); // create object (starting with 10)
+        @object.Add(5); // add 5
+        @object.Substract(3); // subtract 3
+        @object.Print(); // print current state
+
+        Console.ReadKey(); // wait for input
+    }
+}
